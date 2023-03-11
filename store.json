@@ -1,0 +1,236 @@
+{
+  "User.496a592e-1bda-4447-aa73-0fa7c26888df": {
+    "id": "496a592e-1bda-4447-aa73-0fa7c26888df",
+    "created_at": "2023-03-09T19:30:09.113084",
+    "updated_at": "2023-03-09T19:30:09.113123",
+    "__class__": "User"
+  },
+  "BaseModel.33daa24f-34cd-48ca-827d-c09e91f5b9b5": {
+    "id": "33daa24f-34cd-48ca-827d-c09e91f5b9b5",
+    "created_at": "2023-03-09T20:29:12.916467",
+    "updated_at": "2023-03-09T20:29:12.916501",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.7602492a-b8c8-4e51-8949-f153c30a0fcb": {
+    "id": "7602492a-b8c8-4e51-8949-f153c30a0fcb",
+    "created_at": "2023-03-09T20:29:12.917943",
+    "updated_at": "2023-03-09T20:29:12.917957",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.1a73846e-2852-494d-b7b0-b07b9bc1c5bb": {
+    "id": "1a73846e-2852-494d-b7b0-b07b9bc1c5bb",
+    "created_at": "2023-03-09T20:29:12.918091",
+    "updated_at": "2023-03-09T20:29:12.921383",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.a9641e2f-55ba-4a38-a813-aa7c90851bc1": {
+    "id": "a9641e2f-55ba-4a38-a813-aa7c90851bc1",
+    "created_at": "2023-03-09T20:29:12.922580",
+    "updated_at": "2023-03-09T20:29:12.923136",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.6fc53095-d9e7-4672-a650-5e2e3ad72732": {
+    "id": "6fc53095-d9e7-4672-a650-5e2e3ad72732",
+    "created_at": "2023-03-09T20:29:12.924295",
+    "updated_at": "2023-03-09T20:29:12.924303",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.ba6c74b9-f7bf-4a6f-a11d-eaa3b32a7fc3": {
+    "id": "ba6c74b9-f7bf-4a6f-a11d-eaa3b32a7fc3",
+    "created_at": "2023-03-09T20:29:12.924510",
+    "updated_at": "2023-03-09T20:29:12.924515",
+    "__class__": "BaseModel"
+  },
+  "Amenity.c195983a-fc7a-462b-b3f3-a8318f7c3663": {
+    "id": "c195983a-fc7a-462b-b3f3-a8318f7c3663",
+    "created_at": "2023-03-09T20:29:12.924708",
+    "updated_at": "2023-03-09T20:29:12.924721",
+    "name": "Splendid",
+    "__class__": "Amenity"
+  },
+  "City.b94fda99-01d6-447d-aa0a-8f1df52804fc": {
+    "id": "b94fda99-01d6-447d-aa0a-8f1df52804fc",
+    "created_at": "2023-03-09T20:29:12.925742",
+    "updated_at": "2023-03-09T20:29:12.925870",
+    "name": "New England",
+    "__class__": "City"
+  },
+  "Place.ffcf2417-f18d-4ad7-845e-3d99d8d5d8a4": {
+    "id": "ffcf2417-f18d-4ad7-845e-3d99d8d5d8a4",
+    "created_at": "2023-03-09T20:29:12.927478",
+    "updated_at": "2023-03-09T20:29:12.927510",
+    "name": "1743 Berry St",
+    "description": "A lovely appartment for two",
+    "number_rooms": 2,
+    "number_bathrooms": 1,
+    "max_guest": 3,
+    "price_by_night": 125,
+    "latitude": 74.5082,
+    "longitude": 12.3484,
+    "__class__": "Place"
+  },
+  "Review.627a32c9-8331-48fe-aba6-adfe81d99d28": {
+    "id": "627a32c9-8331-48fe-aba6-adfe81d99d28",
+    "created_at": "2023-03-09T20:29:12.929021",
+    "updated_at": "2023-03-09T20:29:12.929073",
+    "text": "This place was wonderful!",
+    "__class__": "Review"
+  },
+  "State.d4a17156-621a-4dd6-9195-4de10d6e319f": {
+    "id": "d4a17156-621a-4dd6-9195-4de10d6e319f",
+    "created_at": "2023-03-09T20:29:12.930583",
+    "updated_at": "2023-03-09T20:29:12.930611",
+    "name": "New Hampshire",
+    "__class__": "State"
+  },
+  "User.3770662d-6956-4eaf-9c8c-7bf4e724ad46": {
+    "id": "3770662d-6956-4eaf-9c8c-7bf4e724ad46",
+    "created_at": "2023-03-09T20:29:12.932388",
+    "updated_at": "2023-03-09T20:29:12.932408",
+    "email": "alanwalker@ubi.com",
+    "password": "as34b2",
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "__class__": "User"
+  },
+  "User.d2156292-d982-4516-95bd-b75bcf37b305": {
+    "id": "d2156292-d982-4516-95bd-b75bcf37b305",
+    "created_at": "2023-03-09T20:29:12.933734",
+    "updated_at": "2023-03-09T20:29:12.933748",
+    "email": "alanwalker@ubi.com",
+    "password": "as34b2",
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "__class__": "User"
+  },
+  "User.339130cd-bf34-4e9e-8804-1aae7cd25f9f": {
+    "id": "339130cd-bf34-4e9e-8804-1aae7cd25f9f",
+    "created_at": "2023-03-09T20:29:12.933957",
+    "updated_at": "2023-03-09T20:29:12.937624",
+    "__class__": "User"
+  },
+  "User.199d126e-9adf-4029-8962-1226929435f4": {
+    "id": "199d126e-9adf-4029-8962-1226929435f4",
+    "created_at": "2023-03-09T20:29:12.939346",
+    "updated_at": "2023-03-09T20:29:12.939910",
+    "email": "alanwalker@ubi.com",
+    "password": "as34b2",
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "__class__": "User"
+  },
+  "BaseModel.8da6d398-a7e3-48cc-92f4-bdd17fec9083": {
+    "id": "8da6d398-a7e3-48cc-92f4-bdd17fec9083",
+    "created_at": "2023-03-09T20:31:47.619115",
+    "updated_at": "2023-03-09T20:31:47.619138",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.3614155f-a884-4d09-a1d8-71eb618fcf69": {
+    "id": "3614155f-a884-4d09-a1d8-71eb618fcf69",
+    "created_at": "2023-03-09T20:31:47.620458",
+    "updated_at": "2023-03-09T20:31:47.620472",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.3cf6d6cd-be2e-4fbf-b015-d551036f934c": {
+    "id": "3cf6d6cd-be2e-4fbf-b015-d551036f934c",
+    "created_at": "2023-03-09T20:31:47.620636",
+    "updated_at": "2023-03-09T20:31:47.624004",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.50406f3e-da17-4e3d-b649-4549a544b5cf": {
+    "id": "50406f3e-da17-4e3d-b649-4549a544b5cf",
+    "created_at": "2023-03-09T20:31:47.625617",
+    "updated_at": "2023-03-09T20:31:47.626186",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.93e24ca7-3d21-4c93-a09d-43d5ba736bfa": {
+    "id": "93e24ca7-3d21-4c93-a09d-43d5ba736bfa",
+    "created_at": "2023-03-09T20:31:47.627468",
+    "updated_at": "2023-03-09T20:31:47.627484",
+    "__class__": "BaseModel"
+  },
+  "BaseModel.8d8fdd7f-46ea-4478-90cc-8aa8e67dc96a": {
+    "id": "8d8fdd7f-46ea-4478-90cc-8aa8e67dc96a",
+    "created_at": "2023-03-09T20:31:47.627719",
+    "updated_at": "2023-03-09T20:31:47.627728",
+    "__class__": "BaseModel"
+  },
+  "Amenity.48a69226-ef5f-4a17-8756-79f8ac3a4df7": {
+    "id": "48a69226-ef5f-4a17-8756-79f8ac3a4df7",
+    "created_at": "2023-03-09T20:31:47.628005",
+    "updated_at": "2023-03-09T20:31:47.628037",
+    "name": "Splendid",
+    "__class__": "Amenity"
+  },
+  "City.d2b82eb3-fa6d-4707-a230-3593004c9732": {
+    "id": "d2b82eb3-fa6d-4707-a230-3593004c9732",
+    "created_at": "2023-03-09T20:31:47.629789",
+    "updated_at": "2023-03-09T20:31:47.629812",
+    "name": "New England",
+    "__class__": "City"
+  },
+  "Place.b667747f-3701-48a7-879a-45a68819612d": {
+    "id": "b667747f-3701-48a7-879a-45a68819612d",
+    "created_at": "2023-03-09T20:31:47.631534",
+    "updated_at": "2023-03-09T20:31:47.631568",
+    "name": "1743 Berry St",
+    "description": "A lovely appartment for two",
+    "number_rooms": 2,
+    "number_bathrooms": 1,
+    "max_guest": 3,
+    "price_by_night": 125,
+    "latitude": 74.5082,
+    "longitude": 12.3484,
+    "__class__": "Place"
+  },
+  "Review.6d838f2d-6872-4360-b634-29881702fec4": {
+    "id": "6d838f2d-6872-4360-b634-29881702fec4",
+    "created_at": "2023-03-09T20:31:47.633490",
+    "updated_at": "2023-03-09T20:31:47.633521",
+    "text": "This place was wonderful!",
+    "__class__": "Review"
+  },
+  "State.9b11165f-fb45-4533-9949-933b296cd694": {
+    "id": "9b11165f-fb45-4533-9949-933b296cd694",
+    "created_at": "2023-03-09T20:31:47.635220",
+    "updated_at": "2023-03-09T20:31:47.635240",
+    "name": "New Hampshire",
+    "__class__": "State"
+  },
+  "User.ecade8e4-6e63-4aea-9201-76cd2aec72cc": {
+    "id": "ecade8e4-6e63-4aea-9201-76cd2aec72cc",
+    "created_at": "2023-03-09T20:31:47.636868",
+    "updated_at": "2023-03-09T20:31:47.636898",
+    "email": "alanwalker@ubi.com",
+    "password": "as34b2",
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "__class__": "User"
+  },
+  "User.a5b33beb-34f6-4ba6-9312-03320e388d3b": {
+    "id": "a5b33beb-34f6-4ba6-9312-03320e388d3b",
+    "created_at": "2023-03-09T20:31:47.639045",
+    "updated_at": "2023-03-09T20:31:47.639057",
+    "email": "alanwalker@ubi.com",
+    "password": "as34b2",
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "__class__": "User"
+  },
+  "User.daaf3eca-1ef1-4024-abc2-cc3a31102152": {
+    "id": "daaf3eca-1ef1-4024-abc2-cc3a31102152",
+    "created_at": "2023-03-09T20:31:47.639272",
+    "updated_at": "2023-03-09T20:31:47.643202",
+    "__class__": "User"
+  },
+  "User.4b7e77a5-2292-4374-8e9a-300d473f1924": {
+    "id": "4b7e77a5-2292-4374-8e9a-300d473f1924",
+    "created_at": "2023-03-09T20:31:47.644762",
+    "updated_at": "2023-03-09T20:31:47.645336",
+    "email": "alanwalker@ubi.com",
+    "password": "as34b2",
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "__class__": "User"
+  }
+}

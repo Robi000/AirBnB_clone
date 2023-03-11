@@ -1,43 +1,62 @@
 #!/usr/bin/python3
-
+"""this is a file that run as cmd on the terminal 
+    """
 import cmd
-from turtle import *
-import json
+
 # model classes
+from models import storage
 from models.base_model import BaseModel
+from models.user import User
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
 from collections import defaultdict
 # argument parsers
 create = __import__("checker").create
-show = __import__("checker").show
+show_destroy = __import__("checker").show_destroy
+all = __import__("checker").all
+update = __import__("checker").update
 
 klass = {
-    "BaseModel": BaseModel
+    "BaseModel": BaseModel,
+    "User": User,
+    "Review": Review,
+    "Place": Place,
+    "City": City,
+    "Amenity": Amenity
 }
 
 
-def def_value():
-    return []
+class HBNBCommand(cmd.Cmd):
+    """this is the main starting class
 
+    Args:
+        cmd (its just inheritance ): _description_
 
-obj = defaultdict(def_value)
-
-
-class TurtleShell(cmd.Cmd):
+    Returns:
+        None: this will start the loop later 
+    """
     prompt = '(hbnb) '
-    file = None
-    obj = defaultdict(def_value)
 
-    def preloop(self):
-        """this will load the object with first call
+    def functions(self, fun):
+        """treturn fuction for the loop back 
+
+        Args:
+            fun (str): name of fun
+
+        Returns:
+            fun: the fun that exist in this class
         """
-        for key in klass:
-            try:
-                with open(key + ".json", "r") as f:
-                    self.obj[key].append(json.load(f))
-            except:
-                pass
-
-        print(self.obj)
+        func = {
+            "create": self.do_create,
+            "show": self.do_show,
+            "all": self.do_all,
+            "count": self,
+            "destroy": self.do_destroy,
+            "update": self.do_update
+        }
+        return func.get(fun, None)
 
     def do_quit(self, args):
         """Quit command to exit the program
@@ -61,12 +80,7 @@ class TurtleShell(cmd.Cmd):
             return
         base = base[1]
         instance = klass[base[0]]()
-
-        self.obj[base[0]].append(instance.to_dict())
-
-        with open(base[0]+".json", "w") as f:
-            json.dump(self.obj[base[0]], f, indent=4)
-
+        instance.save()
         print(instance.id)
         return
 
@@ -76,20 +90,116 @@ class TurtleShell(cmd.Cmd):
         Args:
             args (string): the argument 
         """
-        base = show(args)
+        base = show_destroy(args)
         if not base[0]:
             print(base[1])
             return
         base = base[1]
         instance = None
-        for x in self.obj[base[0]]:
-            if x["id"] == base[1]:
-                instance = klass[base[0]](**x)
+        key = base[0]+"."+base[1]
+        instance = storage.all().get(key, None)
         if instance:
-            print(instance)
+            print(instance.__str__())
+            return
+
+        print("** no instance found **")
+        return
+
+    def do_destroy(self, args):
+        """destroy an instance from the file 
+
+        Args:
+            args (id and class): object to delete 
+        """
+        base = show_destroy(args)
+        if not base[0]:
+            print(base[1])
+            return
+        base = base[1]
+        key = base[0]+"."+base[1]
+        result = storage.destroy(key)
+        if result:
+            print(result)
+
+    def do_all(self, args):
+        """this is another fun to display existing objects 
+
+        Args:
+            args (class or none ): classes
+        """
+        base = all(args)
+        if not base[0]:
+            print(base[1])
+            return
+        base = base[1]
+        result = []
+        objs = storage.all()
+        if base:
+            for key in objs:
+                check = key.split(".")
+                if check[0] == base[0]:
+                    result.append(objs[key].__str__())
+
         else:
-            print("** no instance found **")
+            for val in objs.values():
+                result.append(val.__str__())
+
+        print(result)
+
+    def do_update(self, args):
+        """update an instance with given arguments 
+
+        Args:
+            args (str): will be parced for ease of use 
+        """
+        base = update(args)
+        if not base[0]:
+            print(base[1])
+            return
+        base = base[1]
+        result = storage.update(base)
+        if result:
+            print(result)
+
+    def default(self, line: str) -> None:
+        """for the advanced commands 
+
+        Args:
+            line (str ): line inserted 
+
+        Returns:
+            nothing : just nothing 
+        """
+        args = line.split(".")
+        if args[0] not in klass:
+            return False
+        if len(args) < 2:
+            return False
+        args[1] = args[1][:-1].split("(")
+        func = self.functions(args[1][0])
+        if not func:
+            return False
+        if args[1][0] == "all":
+            func(args[0])
+        if args[1][0] == "show":
+            arg = args[0] + " " + args[1][1][1:-1]
+            print(arg)
+            func(arg)
+        if args[1][0] == "destroy":
+            arg = args[0] + " " + args[1][1][1:-1]
+            print(arg)
+            func(arg)
+        if args[1][0] == "update":
+            args[1][1] = args[1][1].split(",")
+            arg = args[0] + " "
+            if len(args[1][1]) > 0:
+                arg = arg + args[1][1][0][1:-1] + " "
+            if len(args[1][1]) > 1:
+                arg = arg + args[1][1][1][2:-1] + " "
+            if len(args[1][1]) > 2:
+                arg = arg + args[1][1][2][1:]
+            func(arg)
 
 
 if __name__ == '__main__':
-    TurtleShell().cmdloop()
+    HBNBCommand().cmdloop()
