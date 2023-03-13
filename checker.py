@@ -4,7 +4,8 @@
     Returns:
         _type_: _description_
     """
-className = set(["BaseModel", "User", "Review", "Place", "City", "Amenity"])
+className = set(["BaseModel", "User", "Review",
+                "Place", "City", "Amenity", "State"])
 
 
 def create(args):

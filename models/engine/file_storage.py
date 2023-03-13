@@ -18,7 +18,7 @@ def def_value():
 class FileStorage():
     """serializes instances to a JSON file and deserializes JSON file to instances:
     """
-    __file_path = "store.json"
+    __file_path = 'file.json'
     __objects = defaultdict(def_value)
 
     def all(self):
