@@ -58,15 +58,22 @@ class HBNBCommand(cmd.Cmd):
         }
         return func.get(fun, None)
 
-    def do_quit(self, args):
-        """Quit command to exit the program
-        """
+    def do_quit(self, arg):
+        """Exit the HBNB console:  quit"""
         return True
 
-    def do_EOF(self, args):
-        """EOF command to exit the program
-        """
+    def do_EOF(self, arg):
+        """Exit the HBNB console:  EOF"""
         return True
+
+    def emptyline(self):
+        """Empty line + Enter will just return the prompt without any error.
+        i.e. the prompt will not execute the previous command"""
+        return False
+
+    def postloop(self):
+        """Print a new line when program exits"""
+        print()
 
     def do_create(self, args):
         """create a model instance 
