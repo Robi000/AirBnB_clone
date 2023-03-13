@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """this is a file that run as cmd on the terminal 
     """
 import cmd
@@ -188,14 +189,17 @@ class HBNBCommand(cmd.Cmd):
             return False
         if args[1][0] == "all":
             func(args[0])
+            return
         if args[1][0] == "show":
             arg = args[0] + " " + args[1][1][1:-1]
             print(arg)
             func(arg)
+            return
         if args[1][0] == "destroy":
             arg = args[0] + " " + args[1][1][1:-1]
             print(arg)
             func(arg)
+            return
         if args[1][0] == "update":
             args[1][1] = args[1][1].split(",")
             arg = args[0] + " "
@@ -206,6 +210,9 @@ class HBNBCommand(cmd.Cmd):
             if len(args[1][1]) > 2:
                 arg = arg + args[1][1][2][1:]
             func(arg)
+            return
+
+        cmd.Cmd.default()
 
 
 if __name__ == '__main__':
