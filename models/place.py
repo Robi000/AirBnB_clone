@@ -9,6 +9,7 @@ class Place(base_model.BaseModel):
     """Defines a place for rent"""
     city_id = ""
     state_id = ""
+    user_id = ""
     name = ""
     description = ""
     number_rooms = 0
