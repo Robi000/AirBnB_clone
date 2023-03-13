@@ -79,7 +79,8 @@ class FileStorage():
             with open(self.__file_path, "r") as f:
                 obj = json.load(f)
         except Exception as e:
-            pass
+            with open(self.__file_path, "w") as f:
+                pass
 
         self.__objects = defaultdict(def_value)
 
