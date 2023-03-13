@@ -12,6 +12,7 @@ from models.amenity import Amenity
 from models.city import City
 from models.place import Place
 from models.review import Review
+from models.state import State
 from collections import defaultdict
 # argument parsers
 create = __import__("checker").create
@@ -25,7 +26,8 @@ klass = {
     "Review": Review,
     "Place": Place,
     "City": City,
-    "Amenity": Amenity
+    "Amenity": Amenity,
+    "State": State
 }
 
 
@@ -213,7 +215,3 @@ class HBNBCommand(cmd.Cmd):
             return
 
         cmd.Cmd.default()
-
-
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
